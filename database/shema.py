@@ -9,7 +9,6 @@ class User(BaseModel):
     username: str | None = None
     language_code: str | None = None
 
-
 class Subscribe(BaseModel):
     sub_id : int
     start_date: date
