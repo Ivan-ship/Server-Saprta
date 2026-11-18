@@ -27,3 +27,7 @@ async def connection():
         res = await conn.execute(text("SELECT VERSION()"))
         version = res.scalar()
         print(version)
+
+async def get_session():
+    async with SessionLocal() as session:
+        yield session
