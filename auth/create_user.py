@@ -10,4 +10,7 @@ router = APIRouter()
 async def create_user(tg_user: User, session: AsyncSession = Depends(get_session)):
     repository = CreateUser(session)
     user = await repository.create_user(tg_user)
-    return user
+    return {
+        "message": "Успешная пегистрация",
+        "user_id": user.id
+    }

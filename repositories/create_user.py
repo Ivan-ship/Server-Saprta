@@ -19,7 +19,6 @@ class CreateUser:
                 last_name = tg_user.last_name,
                 username = tg_user.username,
                 language_code = tg_user.language_code,
-                is_premium = tg_user.is_premium,
                 created_at = datetime.now()
             )
             self.session.add(user)
